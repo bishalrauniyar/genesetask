@@ -14,7 +14,7 @@ def test_home_status_code(client):
 def test_home_message(client):
     response = client.get("/")
     data = response.get_json()
-    assert data["message"] == "Hello Genese Solution! My CI/CD task is running!"
+    assert data["message"] == "Hello Genese Solution! My CI/CD task is running!. Now I am updating the code to test the CI/CD pipeline."
 
 def test_status_check(client):
     response = client.get("/status")
