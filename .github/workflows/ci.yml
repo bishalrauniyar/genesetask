@@ -1,4 +1,4 @@
-name: CI Pipeline
+name: CI Pipeline — Run Tests
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build-and-test:
+  test:
     runs-on: ubuntu-latest
 
     steps:
@@ -27,9 +27,3 @@ jobs:
 
       - name: Run tests
         run: pytest
-
-      - name: Build Docker image
-        run: docker build -t genesetask .
-
-      - name: Build success message
-        run: echo "Build, tests and Docker all passed!"
