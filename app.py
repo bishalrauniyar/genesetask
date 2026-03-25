@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return jsonify({"message": "Checking on live 1"})
+    return jsonify({"message": "Hello Genese Solution! My CI/CD task is running!. Now I am updating the code to test the CI/CD pipeline. I am checking live 1"})
 
 @app.route("/status")
 def status():
